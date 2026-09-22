@@ -38,16 +38,25 @@ L'identité repose sur les assets officiels validés et les consignes strictes d
   - Vecteur SVG fond noir : [`assets/logos/logo-lemotifprod-vector.svg`](assets/logos/logo-lemotifprod-vector.svg)
   - Vecteur SVG fond jaune : [`assets/logos/logo-lemotifprod-yellow.svg`](assets/logos/logo-lemotifprod-yellow.svg)
 
-### B. Palette de Couleurs & Directives
+### B. Typographie Officielle : Montserrat
+- **Police unique du projet :** **Montserrat** (Google Fonts).
+- **Hiérarchie & Graisses (*Font Weights*) :**
+  - **Logo & Titres principaux (H1/H2) :** `Montserrat Bold (700)` ou `SemiBold (600)` — impact géométrique, net et moderne.
+  - **Sous-titres & Badges :** `Montserrat Medium (500)` — lisibilité et distinction sans lourdeur.
+  - **Corps de texte & Descriptions de projets :** `Montserrat Regular (400)` ou `Light (300)` — élégance et fluidité de lecture.
+  - **Baseline du logo (*photographie-videographie*) :** `Montserrat Extra-Light (200)` en minuscules avec un fort *letter-spacing* (`tracking-[0.25em]`).
+
+### C. Palette de Couleurs & Directives
 | Rôle | Couleur | Code Hexa / Rendu | Règle d'usage |
 | :--- | :--- | :--- | :--- |
 | **Fond dominant** | **Noir profond** | `#000000` / `#08090C` | Dominante sur 100% des pages (ambiance sobre & cinématographique) |
 | **Typographie & Titres** | **Blanc pur & Gris clair** | `#FFFFFF` / `#F3F4F6` | Lisibilité maximale, élégance éditoriale |
 | **Accents & Bordures** | **Jaune solaire / Safran** | `#EAB308` / `#F59E0B` | **Non dominant** : réservé aux bordures fines des photos et aux touches d'accentuation |
 
-### C. Ambiance & Style
+### D. Ambiance & Style
 - **Ambiance :** Sombre, créative, sobre et professionnelle.
 - **Principe directeur :** *"Pas de designs compliqués, un rendu épuré et direct"* qui laisse toute la place à la puissance des photos et des vidéos.
+
 
 ---
 
