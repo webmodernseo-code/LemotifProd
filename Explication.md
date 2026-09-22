@@ -22,11 +22,21 @@ Ce document formalise l'analyse détaillée du cahier des charges (CDC), des ré
 
 L'identité repose sur les assets officiels validés et les consignes strictes du questionnaire :
 
-### A. Le Logo Officiel
+### A. Le Logo Officiel & Déclinaisons
+
+![Logo Principal Lemotif Prod](assets/logos/logo-lemotifprod-principal.png)
+
+![Déclinaisons & Palette de Couleurs du Logo](assets/logos/logo-lemotifprod-declinaisons.jpg)
+
 - **Symbole :** Arche circulaire ouverte (évocation d'un objectif photo / diaphragme / lettre stylisée) complétée par un point carré précis en bas à droite.
 - **Typographie du logo :** 
   - `Lemotif Prod` : Police sans-serif moderne, nette et contrastée.
   - `photographie-videographie` : Bas de casse ultra-fin avec fort espacement des lettres (*letter-spacing*).
+- **Fichiers sources disponibles dans le projet :**
+  - Image officielle fond noir : [`assets/logos/logo-lemotifprod-principal.png`](assets/logos/logo-lemotifprod-principal.png)
+  - Déclinaisons jaune / noir / blanc : [`assets/logos/logo-lemotifprod-declinaisons.jpg`](assets/logos/logo-lemotifprod-declinaisons.jpg)
+  - Vecteur SVG fond noir : [`assets/logos/logo-lemotifprod-vector.svg`](assets/logos/logo-lemotifprod-vector.svg)
+  - Vecteur SVG fond jaune : [`assets/logos/logo-lemotifprod-yellow.svg`](assets/logos/logo-lemotifprod-yellow.svg)
 
 ### B. Palette de Couleurs & Directives
 | Rôle | Couleur | Code Hexa / Rendu | Règle d'usage |
