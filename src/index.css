@@ -1,0 +1,517 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 38 88% 52%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 38 88% 52%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 225 25% 4%;
+    --foreground: 210 40% 98%;
+    --card: 225 15% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 225 20% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 38 88% 52%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 225 12% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 225 12% 14%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 225 12% 16%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 225 12% 16%;
+    --input: 225 12% 16%;
+    --ring: 38 88% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+::-webkit-scrollbar-thumb {
+  background: #23252B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5CE7A;
+}
+
+/* ==========================================================================
+   ✨ EFFETS TYPOGRAPHIQUES & DÉGRADÉS MÉTALLIQUES (STYLE PTM / STRIPE / APPLE)
+   ========================================================================== */
+
+.text-gradient-metallic-dark {
+  background-image: radial-gradient(ellipse at 75% 15%, #FFFFFF 0%, #EDEDEB 22%, #B8B8B6 55%, #6E6E6C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 60px rgba(0, 0, 0, 0.35));
+}
+
+.text-gradient-metallic-light {
+  background-image: radial-gradient(ellipse at 80% 25%, #000000 0%, #1a1a1a 30%, #4a4a4a 65%, #b0b0b0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
+}
+
+.text-gradient-gold,
+.text-gradient-champagne {
+  background-image: linear-gradient(135deg, #FFF5DE 0%, #F5CE7A 45%, #E5A848 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-champagne-warm {
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #FFF0C4 35%, #F0C070 70%, #D4953A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   ✨ ICÔNES & BOUTONS LIQUID GLASS ULTRA-PREMIUM (MATÉRIAU BROKEN-BY-DESIGN / VISIONOS)
+   ========================================================================== */
+
+.icon-liquid-glass-dark,
+.icon-liquid-glass-cyan,
+.icon-liquid-glass-gold {
+  color: #C6D6F4;
+  stroke: url(#liquid-glass-dark-grad) !important;
+  filter: drop-shadow(0 1px 1.5px rgba(205, 225, 255, 0.5)) drop-shadow(0 0 10px rgba(150, 185, 255, 0.22)) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.icon-liquid-glass-dark:hover,
+.group:hover .icon-liquid-glass-dark,
+.icon-liquid-glass-cyan:hover,
+.group:hover .icon-liquid-glass-cyan,
+.icon-liquid-glass-gold:hover,
+.group:hover .icon-liquid-glass-gold {
+  filter: brightness(1.22) drop-shadow(0 1px 3px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 18px rgba(150, 185, 255, 0.55)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+  transform: translateY(-2px) scale(1.1);
+}
+
+.icon-liquid-glass-light {
+  color: #4A5874;
+  stroke: url(#liquid-glass-light-grad) !important;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.95)) drop-shadow(0 0 8px rgba(165, 185, 232, 0.28)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.icon-liquid-glass-light:hover,
+.group:hover .icon-liquid-glass-light {
+  filter: brightness(1.15) drop-shadow(0 1px 2px rgba(255, 255, 255, 1)) drop-shadow(0 0 14px rgba(150, 185, 255, 0.45)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* 🧊 ONGLETS & BOUTONS LIQUID GLASS */
+.tab-liquid-glass-active {
+  position: relative;
+  background: linear-gradient(135deg, rgba(18, 22, 36, 0.92) 0%, rgba(10, 13, 22, 0.96) 60%, rgba(3, 4, 7, 0.98) 100%);
+  border: 1px solid rgba(198, 214, 244, 0.38);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1.5px rgba(205, 225, 255, 0.5),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+    0 0 24px rgba(150, 185, 255, 0.18);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  color: #DEE8FC;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-liquid-glass-active::before {
+  content: '';
+  position: absolute;
+  inset-x: 12px;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(222, 232, 252, 0.75) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.tab-liquid-glass-inactive {
+  position: relative;
+  background: linear-gradient(132deg, rgba(255, 255, 255, 0.82) 0%, rgba(240, 244, 252, 0.65) 100%);
+  border: 1px solid rgba(198, 214, 244, 0.5);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.03),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(165, 185, 232, 0.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  color: #2D3748;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-liquid-glass-inactive:hover {
+  background: linear-gradient(132deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 255, 0.85) 100%);
+  border-color: rgba(165, 185, 232, 0.85);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1.5px rgba(255, 255, 255, 1),
+    0 0 20px rgba(150, 185, 255, 0.28);
+  transform: translateY(-2px);
+  color: #0A0D14;
+}
+
+.btn-liquid-glass-dark {
+  background: linear-gradient(135deg, rgba(18, 22, 36, 0.85) 0%, rgba(8, 10, 16, 0.92) 100%);
+  border: 1px solid rgba(198, 214, 244, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(205, 225, 255, 0.35), 0 0 14px rgba(150, 185, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #DEE8FC;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-liquid-glass-dark:hover {
+  background: linear-gradient(135deg, rgba(26, 32, 50, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
+  border-color: rgba(198, 214, 244, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 0 22px rgba(150, 185, 255, 0.28);
+  transform: translateY(-1.5px);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   🏷️ BADGES ULTRA-PREMIUM (PROTRADINGMASTERY STYLE AVEC MONTSERRAT & ACCENT JAUNE)
+   ========================================================================== */
+
+.badge-premium-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #14161C;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.badge-premium-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #0A0A0A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.badge-number-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 244, 252, 0.92) 100%);
+  border: 1px solid rgba(198, 214, 244, 0.6);
+  color: #0A0D14;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 1.5px rgba(255, 255, 255, 0.95), 0 0 10px rgba(165, 185, 232, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   🌐 GRILLE VECTORIELLE DE FOND & ORBES D'AMBIANCE (STYLE EXACT PROTRADINGMASTERY)
+   ========================================================================== */
+
+.pixy-template-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.pixy-bg-grid-line {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.038) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.038) 1px, transparent 1px);
+  background-size: 54px 54px;
+}
+
+.pixy-template-grid-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 25%, #08090C 92%);
+}
+
+.pixy-grid-pattern-light {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
+
+/* ==========================================================================
+   🎬 DOUBLE ACCENT : OR CHAMPAGNE (#FFF0C4) + BLEU NUIT CINÉMA (#1E2D4A)
+   ========================================================================== */
+
+.orb-champagne {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 163, 29, 0.15) 0%, transparent 68%);
+  filter: blur(76px);
+  pointer-events: none;
+}
+
+.orb-midnight-blue {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 58, 95, 0.32) 0%, transparent 68%);
+  filter: blur(84px);
+  pointer-events: none;
+}
+
+.orb-silver-moon {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 210, 235, 0.14) 0%, transparent 68%);
+  filter: blur(72px);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   💎 CARTES & SURFACES DE LUXE
+   ========================================================================== */
+
+.card-luxury-dark {
+  background: rgba(14, 17, 24, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+}
+
+.card-luxury-light {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border-radius: 1rem;
+}
+
+/* ==========================================================================
+   ⚡ BOUTONS CTA ULTRA-PREMIUM
+   ========================================================================== */
+
+.btn-primary-lemotif {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 24px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #FFF5DE 0%, #F5CE7A 50%, #E5A848 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #08090C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(229, 168, 72, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary-lemotif:hover {
+  transform: translateY(-1.5px);
+  background: linear-gradient(135deg, #FFFFFF 0%, #FCE09E 50%, #EDB65E 100%);
+  box-shadow: 0 8px 24px rgba(229, 168, 72, 0.5), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+}
+
+.btn-secondary-lemotif {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 22px;
+  border-radius: 6px;
+  background: #14161C;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary-lemotif:hover {
+  transform: translateY(-1px);
+  background: #1A1D24;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@keyframes loading-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loading {
+  animation: loading-slide 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.glass-panel {
+  background: rgba(14, 16, 21, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.65);
+  color: transparent;
+}
+
+/* Masquer la scrollbar tout en conservant le défilement tactile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 💫 Défilement Infini Continu (Infinite Marquee) */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: marquee-reverse 35s linear infinite;
+}
+
+/* 🚀 RENDU HYPER-RAPIDE : OPTIMISATION DU COMPOSITEUR GPU & FLUIDITÉ */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.gpu-accelerated {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
