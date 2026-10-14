@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState, type FormEvent } from "react";
 import { Header } from "@/components/ui/header-01";
 import { Footer } from "@/components/ui/footer";
@@ -262,7 +264,7 @@ export default function DemoOne() {
                 L'art de l'image et du mouvement, sculpté pour immortaliser l'inestimable.
               </p>
               <p className="text-gray-300 text-xs sm:text-sm font-normal leading-[1.6] drop-shadow-sm">
-                Production photographique d'art, captation cinématographique 4K et direction artistique sur-mesure pour les particuliers et les marques exigeantes.
+                Lemotif Prod, photographe et vidéaste professionnel : mariages, portraits, événements et productions audiovisuelles en France, Côte d’Ivoire et Burkina Faso.
               </p>
             </div>
 
